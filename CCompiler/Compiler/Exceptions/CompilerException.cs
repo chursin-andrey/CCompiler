@@ -17,10 +17,19 @@ namespace CCompiler.Compiler.Exceptions
         /// <summary>
         /// Exception about compiler issue
         /// </summary>
+        public CompilerException()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Exception about compiler issue
+        /// </summary>
         /// <param name="lineIndex">index of line with issue</param>
         /// <param name="positionIndex">index of position in line with issue</param>
         /// <param name="message">reason of issue</param>
         public CompilerException(int lineIndex, int positionIndex, string message)
+            : base(String.Format("Compiler error: Line {0} Position {1} = {2}", lineIndex, positionIndex, message))
         {
             if (lineIndex < 0 || positionIndex < 0)
             {
@@ -31,7 +40,12 @@ namespace CCompiler.Compiler.Exceptions
             this.positionIndex = positionIndex;
         }
 
+        /// <summary>
+        /// Exception about compiler issue
+        /// </summary>
+        /// <param name="message">reason of issue</param>
         public CompilerException(string message)
+            : base(String.Format("Compiler error: {0}", message))
         {
             this.message = message;
             this.lineIndex = -1;
@@ -54,21 +68,5 @@ namespace CCompiler.Compiler.Exceptions
             get { return lineIndex; }
         }
 
-        /// <summary>
-        /// reason of issue
-        /// </summary>
-        public String Message
-        {
-            get { return message; }
-        }
-
-        public override String ToString()
-        {
-            if (lineIndex == -1 || positionIndex == -1)
-            {
-                return String.Format("Compiler error: {0}", message);
-            }
-            return String.Format("Compiler error: Line {0} Position {1} = {2}", lineIndex, positionIndex, message);
-        }
     }
 }
