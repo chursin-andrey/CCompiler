@@ -22,9 +22,20 @@ namespace CCompiler.Compiler.Exceptions
         /// <param name="message">reason of issue</param>
         public CompilerException(int lineIndex, int positionIndex, string message)
         {
+            if (lineIndex < 0 || positionIndex < 0)
+            {
+                throw new ArgumentException("lineIndex and PositionIndex must be positive");
+            }
             this.message = message;
             this.lineIndex = lineIndex;
             this.positionIndex = positionIndex;
+        }
+
+        public CompilerException(string message)
+        {
+            this.message = message;
+            this.lineIndex = -1;
+            this.positionIndex = -1;
         }
 
         /// <summary>
@@ -53,6 +64,10 @@ namespace CCompiler.Compiler.Exceptions
 
         public override String ToString()
         {
+            if (lineIndex == -1 || positionIndex == -1)
+            {
+                return String.Format("Compiler error: {0}", message);
+            }
             return String.Format("Compiler error: Line {0} Position {1} = {2}", lineIndex, positionIndex, message);
         }
     }

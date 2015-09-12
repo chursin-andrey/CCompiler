@@ -4,3 +4,6 @@ C:\Users\Home\Desktop\CCompiler\CCompiler\obj\x86\Debug\CCompiler.exe
 C:\Users\Home\Desktop\CCompiler\CCompiler\obj\x86\Debug\CCompiler.pdb
 I:\MyPrograms\GitHub\CCompiler\CCompiler\obj\x86\Debug\CCompiler.exe
 I:\MyPrograms\GitHub\CCompiler\CCompiler\obj\x86\Debug\CCompiler.pdb
+I:\MyPrograms\GitHub\CCompiler\CCompiler\bin\Debug\CCompiler.exe
+I:\MyPrograms\GitHub\CCompiler\CCompiler\bin\Debug\CCompiler.pdb
+I:\MyPrograms\GitHub\CCompiler\CCompiler\obj\x86\Debug\CCompiler.csprojResolveAssemblyReference.cache
