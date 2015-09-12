@@ -8,7 +8,7 @@ namespace CCompiler.Compiler
 {
     public class CompilerManager
     {
-        public static CompilerManager INSTANSE = new CompilerManager();
+        private static CompilerManager INSTANSE = new CompilerManager();
 
         public CompilerManager()
         {
