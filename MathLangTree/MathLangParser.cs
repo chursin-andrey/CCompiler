@@ -21,7 +21,7 @@ namespace MathLang
         expr    ->   "print"  term
                    | "input"  IDENT
                    | IDENT  "="  term
-                   | "if" "(" add ")" expr "else" expr
+                   | "if" "(" add ")" then expr "else" expr
      *             | "while" "(" add ")" expr
         program ->   (  Expr  )*
         result  ->   program
@@ -122,9 +122,11 @@ namespace MathLang
     }
 
 
-    /*  expr    ->   "print"  term
+    /* expr    ->   "print"  term
                    | "input"  IDENT
                    | IDENT  "="  term
+                   | "if" "(" add ")" "then" expr "else" expr
+                   | "while" "(" add ")" expr
     */
     public AstNode Expr() {
       if (IsMatch("print")) {
@@ -143,6 +145,7 @@ namespace MathLang
           Match("(");
           AstNode ifNode = new AstNode(AstNodeType.IF, Term());
           Match(")");
+          Match("then");
           ifNode.AddChild(Expr());
           if (IsMatch("else"))
           {
@@ -151,7 +154,15 @@ namespace MathLang
           }
           return ifNode;
       }
-      
+      else if (IsMatch("while"))
+      {
+          Match("while");
+          Match("(");
+          AstNode whileNode = new AstNode(AstNodeType.WHILE, Term());
+          Match(")");
+          whileNode.AddChild(Expr());
+          return whileNode;
+      }
       else
       {
           AstNode identifier = IDENT();

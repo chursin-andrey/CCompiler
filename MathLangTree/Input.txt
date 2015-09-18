@@ -1,10 +1,7 @@
 print 0
 A = 7  input B
-
-C         =A
-+B*B
-
+C = A+B
 print C / 2
-
-if (1+1*2) print 3 else A = 9
+if (1*1+1) then print 1 else print 0
+while (1*2-2) print 1
 

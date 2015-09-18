@@ -53,13 +53,13 @@ namespace MathLang
         case PROGRAM:
           return "program";
         case IF:
-          return "IF";
+          return "if";
         case THEN:
-          return "THEN";
+          return "then";
         case ELSE:
-          return "ELSE";
+          return "else";
         case WHILE:
-          return "WHILE";
+          return "while";
         default:
           return "";
       }

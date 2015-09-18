@@ -63,16 +63,35 @@ namespace MathLang
           Console.WriteLine(ExecuteNode(node.GetChild(0)).ToString(NFI));
           break;
 
-
-
+        case AstNodeType.IF:
+          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0)
+          {
+              Console.WriteLine(ExecuteNode(node.GetChild(1)).ToString(NFI));
+          }
+          else
+          {
+              Console.WriteLine(ExecuteNode(node.GetChild(2)).ToString(NFI));
+          }
+          break;
+        
+        
+        case AstNodeType.WHILE:
+          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0)
+          {
+              Console.WriteLine(ExecuteNode(node.GetChild(1)).ToString(NFI));
+          }
+         
+          break;
+       
         case AstNodeType.BLOCK:
         case AstNodeType.PROGRAM:
           for (int i = 0; i < node.ChildCount; i++)
             ExecuteNode(node.GetChild(i));
           break;
-
+        /*
         default:
           throw new IntepreterException("Неизвестный тип узла AST-дерева");
+        */
       }
 
       return 0;
@@ -85,8 +104,8 @@ namespace MathLang
 
 
     public static void Execute(AstNode programNode) {
-      MathLangIntepreter mei=new MathLangIntepreter(programNode);
-      mei.Execute();
+      MathLangIntepreter mli = new MathLangIntepreter(programNode);
+      mli.Execute();
     }
   }
 }

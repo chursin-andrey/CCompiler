@@ -16,7 +16,7 @@ namespace MathLang
         AstNode program = MathLangParser.Parse(source);
         AstNodePrinter.Print(program);
         Console.WriteLine("------------------------");
-        //MathLangIntepreter.Execute(program);
+        MathLangIntepreter.Execute(program);
       }
       catch (Exception e) {
         Console.WriteLine("Error: {0}", e);

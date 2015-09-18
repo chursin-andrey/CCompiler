@@ -1,0 +1,4 @@
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathLangTree\bin\Debug\MathLang.exe
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathLangTree\bin\Debug\MathLang.pdb
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathLangTree\obj\Debug\MathLang.exe
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathLangTree\obj\Debug\MathLang.pdb
