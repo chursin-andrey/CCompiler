@@ -64,11 +64,12 @@ namespace MathLang
           break;
 
         case AstNodeType.IF:
-          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0)
+          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0
+              || double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) < 0)
           {
               Console.WriteLine(ExecuteNode(node.GetChild(1)).ToString(NFI));
           }
-          else
+          else if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) == 0)
           {
               Console.WriteLine(ExecuteNode(node.GetChild(2)).ToString(NFI));
           }
@@ -76,7 +77,8 @@ namespace MathLang
         
         
         case AstNodeType.WHILE:
-          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0)
+          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0
+              || double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) < 0)
           {
               Console.WriteLine(ExecuteNode(node.GetChild(1)).ToString(NFI));
           }
