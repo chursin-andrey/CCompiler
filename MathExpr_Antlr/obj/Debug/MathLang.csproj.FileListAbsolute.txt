@@ -1,0 +1,29 @@
+I:\Теория компиляторов\Методичка\Samples\MathExprExtTree_Antlr\bin\Debug\MathLang.exe
+I:\Теория компиляторов\Методичка\Samples\MathExprExtTree_Antlr\bin\Debug\MathLang.pdb
+I:\Теория компиляторов\Методичка\Samples\MathExprExtTree_Antlr\bin\Debug\Antlr3.Runtime.dll
+I:\Теория компиляторов\Методичка\Samples\MathExprExtTree_Antlr\obj\Debug\MathLang.csprojResolveAssemblyReference.cache
+I:\Теория компиляторов\Методичка\Samples\MathExprExtTree_Antlr\obj\Debug\MathLang.exe
+I:\Теория компиляторов\Методичка\Samples\MathExprExtTree_Antlr\obj\Debug\MathLang.pdb
+F:\Теория компиляторов\Методичка\Samples\MathLangTree_Antlr\obj\Debug\MathLang.csprojResolveAssemblyReference.cache
+F:\Теория компиляторов\Методичка\Samples\MathLangTree_Antlr\obj\Debug\MathLang.exe
+F:\Теория компиляторов\Методичка\Samples\MathLangTree_Antlr\bin\Debug\MathLang.exe
+F:\Теория компиляторов\Методичка\Samples\MathLangTree_Antlr\bin\Debug\MathLang.pdb
+F:\Теория компиляторов\Методичка\Samples\MathLangTree_Antlr\bin\Debug\Antlr3.Runtime.dll
+F:\Теория компиляторов\Методичка\Samples\MathLangTree_Antlr\obj\Debug\MathLang.pdb
+Z:\Теория компиляторов\MathLangTree_Antlr\obj\Debug\MathLang.exe
+Z:\Теория компиляторов\MathLangTree_Antlr\obj\Debug\MathLang.pdb
+Z:\Теория компиляторов\MathLangTree_Antlr\bin\Debug\MathLang.exe
+Z:\Теория компиляторов\MathLangTree_Antlr\bin\Debug\MathLang.pdb
+Z:\Теория компиляторов\MathLangTree_Antlr\bin\Debug\Antlr3.Runtime.dll
+Z:\Теория компиляторов\MathLangTree_Antlr\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Андрей\Google Диск\мага\Теория компиляторов\Магистры\1\obj\Debug\MathLang.exe
+C:\Users\Андрей\Google Диск\мага\Теория компиляторов\Магистры\1\obj\Debug\MathLang.pdb
+C:\Users\Андрей\Google Диск\мага\Теория компиляторов\Магистры\1\bin\Debug\MathLang.exe
+C:\Users\Андрей\Google Диск\мага\Теория компиляторов\Магистры\1\bin\Debug\MathLang.pdb
+C:\Users\Андрей\Google Диск\мага\Теория компиляторов\Магистры\1\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Андрей\Google Диск\мага\Теория компиляторов\Магистры\1\obj\Debug\MathLang.csprojResolveAssemblyReference.cache
+C:\Users\Андрей\Documents\GitHub\CCompiler\1\bin\Debug\MathLang.exe
+C:\Users\Андрей\Documents\GitHub\CCompiler\1\bin\Debug\MathLang.pdb
+C:\Users\Андрей\Documents\GitHub\CCompiler\1\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Андрей\Documents\GitHub\CCompiler\1\obj\Debug\MathLang.exe
+C:\Users\Андрей\Documents\GitHub\CCompiler\1\obj\Debug\MathLang.pdb

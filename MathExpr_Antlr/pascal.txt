@@ -1,0 +1,13 @@
+program p1;
+begin
+	if a > b then begin
+	  a:=7;
+	  gghj:=890;
+	end
+	else
+	  if b>90 then
+	    while a>8 do
+		  d:=89;
+		a:=8;
+	b:=89;
+end.
