@@ -3,7 +3,7 @@ void sum(int a, int b) {
     c=10;
     if (c > a)
 	{
-        c = a+b;
+        c = a + b;
     }
     else{
     c=a-b;

@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 CCompiler.g 2015-09-24 21:56:58
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 CCompiler.g 2015-09-25 00:26:49
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -1184,12 +1184,12 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:41:3: ( ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+ )
+			// CCompiler.g:40:3: ( ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+ )
 			DebugEnterAlt(1);
-			// CCompiler.g:42:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
+			// CCompiler.g:41:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
 			{
-			DebugLocation(42, 3);
-			// CCompiler.g:42:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
+			DebugLocation(41, 3);
+			// CCompiler.g:41:3: ( ' ' | '\\t' | '\\f' | '\\r' | '\\n' )+
 			int cnt1=0;
 			try { DebugEnterSubRule(1);
 			while (true)
@@ -1211,7 +1211,7 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// CCompiler.g:
 					{
-					DebugLocation(42, 3);
+					DebugLocation(41, 3);
 					if ((input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ')
 					{
 						input.Consume();
@@ -1243,7 +1243,7 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(1); }
 
-			DebugLocation(42, 40);
+			DebugLocation(41, 40);
 
 			    _channel=Hidden;
 			  
@@ -1276,15 +1276,15 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ML_COMMENT;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:48:11: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// CCompiler.g:47:11: ( '/*' ( options {greedy=false; } : . )* '*/' )
 			DebugEnterAlt(1);
-			// CCompiler.g:49:3: '/*' ( options {greedy=false; } : . )* '*/'
+			// CCompiler.g:48:3: '/*' ( options {greedy=false; } : . )* '*/'
 			{
-			DebugLocation(49, 3);
+			DebugLocation(48, 3);
 			Match("/*"); 
 
-			DebugLocation(49, 8);
-			// CCompiler.g:49:8: ( options {greedy=false; } : . )*
+			DebugLocation(48, 8);
+			// CCompiler.g:48:8: ( options {greedy=false; } : . )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -1318,9 +1318,9 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// CCompiler.g:49:38: .
+					// CCompiler.g:48:38: .
 					{
-					DebugLocation(49, 38);
+					DebugLocation(48, 38);
 					MatchAny(); 
 
 					}
@@ -1336,10 +1336,10 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(49, 43);
+			DebugLocation(48, 43);
 			Match("*/"); 
 
-			DebugLocation(49, 48);
+			DebugLocation(48, 48);
 
 			    _channel=Hidden;
 			  
@@ -1372,12 +1372,12 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NUMBER;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:55:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
+			// CCompiler.g:54:7: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )? )
 			DebugEnterAlt(1);
-			// CCompiler.g:55:9: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
+			// CCompiler.g:54:9: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )+ )?
 			{
-			DebugLocation(55, 9);
-			// CCompiler.g:55:9: ( '0' .. '9' )+
+			DebugLocation(54, 9);
+			// CCompiler.g:54:9: ( '0' .. '9' )+
 			int cnt3=0;
 			try { DebugEnterSubRule(3);
 			while (true)
@@ -1397,9 +1397,9 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// CCompiler.g:55:10: '0' .. '9'
+					// CCompiler.g:54:10: '0' .. '9'
 					{
-					DebugLocation(55, 10);
+					DebugLocation(54, 10);
 					MatchRange('0','9'); 
 
 					}
@@ -1420,8 +1420,8 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(3); }
 
-			DebugLocation(55, 21);
-			// CCompiler.g:55:21: ( '.' ( '0' .. '9' )+ )?
+			DebugLocation(54, 21);
+			// CCompiler.g:54:21: ( '.' ( '0' .. '9' )+ )?
 			int alt5=2;
 			try { DebugEnterSubRule(5);
 			try { DebugEnterDecision(5, decisionCanBacktrack[5]);
@@ -1436,12 +1436,12 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// CCompiler.g:55:22: '.' ( '0' .. '9' )+
+				// CCompiler.g:54:22: '.' ( '0' .. '9' )+
 				{
-				DebugLocation(55, 22);
+				DebugLocation(54, 22);
 				Match('.'); 
-				DebugLocation(55, 26);
-				// CCompiler.g:55:26: ( '0' .. '9' )+
+				DebugLocation(54, 26);
+				// CCompiler.g:54:26: ( '0' .. '9' )+
 				int cnt4=0;
 				try { DebugEnterSubRule(4);
 				while (true)
@@ -1461,9 +1461,9 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// CCompiler.g:55:27: '0' .. '9'
+						// CCompiler.g:54:27: '0' .. '9'
 						{
-						DebugLocation(55, 27);
+						DebugLocation(54, 27);
 						MatchRange('0','9'); 
 
 						}
@@ -1520,11 +1520,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IDENTIFIER;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:57:11: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+			// CCompiler.g:56:11: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
 			DebugEnterAlt(1);
-			// CCompiler.g:57:14: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			// CCompiler.g:56:14: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			{
-			DebugLocation(57, 14);
+			DebugLocation(56, 14);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1537,8 +1537,8 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 				Recover(mse);
 				throw mse;}
 
-			DebugLocation(58, 9);
-			// CCompiler.g:58:9: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			DebugLocation(57, 9);
+			// CCompiler.g:57:9: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			try { DebugEnterSubRule(6);
 			while (true)
 			{
@@ -1559,7 +1559,7 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// CCompiler.g:
 					{
-					DebugLocation(58, 9);
+					DebugLocation(57, 9);
 					if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 					{
 						input.Consume();
@@ -1615,11 +1615,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ADD;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:60:4: ( '+' )
+			// CCompiler.g:431:4: ( '+' )
 			DebugEnterAlt(1);
-			// CCompiler.g:60:10: '+'
+			// CCompiler.g:431:10: '+'
 			{
-			DebugLocation(60, 10);
+			DebugLocation(431, 10);
 			Match('+'); 
 
 			}
@@ -1650,11 +1650,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = SUB;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:61:4: ( '-' )
+			// CCompiler.g:432:4: ( '-' )
 			DebugEnterAlt(1);
-			// CCompiler.g:61:10: '-'
+			// CCompiler.g:432:10: '-'
 			{
-			DebugLocation(61, 10);
+			DebugLocation(432, 10);
 			Match('-'); 
 
 			}
@@ -1685,11 +1685,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = MUL;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:62:4: ( '*' )
+			// CCompiler.g:433:4: ( '*' )
 			DebugEnterAlt(1);
-			// CCompiler.g:62:10: '*'
+			// CCompiler.g:433:10: '*'
 			{
-			DebugLocation(62, 10);
+			DebugLocation(433, 10);
 			Match('*'); 
 
 			}
@@ -1720,11 +1720,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DIV;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:63:4: ( '/' )
+			// CCompiler.g:434:4: ( '/' )
 			DebugEnterAlt(1);
-			// CCompiler.g:63:10: '/'
+			// CCompiler.g:434:10: '/'
 			{
-			DebugLocation(63, 10);
+			DebugLocation(434, 10);
 			Match('/'); 
 
 			}
@@ -1755,11 +1755,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BIT_AND;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:64:8: ( '&' )
+			// CCompiler.g:435:8: ( '&' )
 			DebugEnterAlt(1);
-			// CCompiler.g:64:10: '&'
+			// CCompiler.g:435:10: '&'
 			{
-			DebugLocation(64, 10);
+			DebugLocation(435, 10);
 			Match('&'); 
 
 			}
@@ -1790,11 +1790,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BIT_OR;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:65:7: ( '|' )
+			// CCompiler.g:436:7: ( '|' )
 			DebugEnterAlt(1);
-			// CCompiler.g:65:10: '|'
+			// CCompiler.g:436:10: '|'
 			{
-			DebugLocation(65, 10);
+			DebugLocation(436, 10);
 			Match('|'); 
 
 			}
@@ -1825,11 +1825,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ASSIGN;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:66:7: ( '=' )
+			// CCompiler.g:437:7: ( '=' )
 			DebugEnterAlt(1);
-			// CCompiler.g:66:10: '='
+			// CCompiler.g:437:9: '='
 			{
-			DebugLocation(66, 10);
+			DebugLocation(437, 9);
 			Match('='); 
 
 			}
@@ -1860,11 +1860,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = GE;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:67:3: ( '>=' )
+			// CCompiler.g:438:3: ( '>=' )
 			DebugEnterAlt(1);
-			// CCompiler.g:67:11: '>='
+			// CCompiler.g:438:11: '>='
 			{
-			DebugLocation(67, 11);
+			DebugLocation(438, 11);
 			Match(">="); 
 
 
@@ -1896,11 +1896,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LE;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:68:3: ( '<=' )
+			// CCompiler.g:439:3: ( '<=' )
 			DebugEnterAlt(1);
-			// CCompiler.g:68:11: '<='
+			// CCompiler.g:439:11: '<='
 			{
-			DebugLocation(68, 11);
+			DebugLocation(439, 11);
 			Match("<="); 
 
 
@@ -1932,11 +1932,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NOTEQUALS;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:69:10: ( '!=' )
+			// CCompiler.g:440:10: ( '!=' )
 			DebugEnterAlt(1);
-			// CCompiler.g:69:13: '!='
+			// CCompiler.g:440:13: '!='
 			{
-			DebugLocation(69, 13);
+			DebugLocation(440, 13);
 			Match("!="); 
 
 
@@ -1968,11 +1968,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = EQUALS;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:70:7: ( '==' )
+			// CCompiler.g:441:7: ( '==' )
 			DebugEnterAlt(1);
-			// CCompiler.g:70:11: '=='
+			// CCompiler.g:441:11: '=='
 			{
-			DebugLocation(70, 11);
+			DebugLocation(441, 11);
 			Match("=="); 
 
 
@@ -2004,11 +2004,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = GT;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:71:3: ( '>' )
+			// CCompiler.g:442:3: ( '>' )
 			DebugEnterAlt(1);
-			// CCompiler.g:71:11: '>'
+			// CCompiler.g:442:11: '>'
 			{
-			DebugLocation(71, 11);
+			DebugLocation(442, 11);
 			Match('>'); 
 
 			}
@@ -2039,11 +2039,11 @@ public partial class CCompilerLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LT;
 			int _channel = DefaultTokenChannel;
-			// CCompiler.g:72:3: ( '<' )
+			// CCompiler.g:443:3: ( '<' )
 			DebugEnterAlt(1);
-			// CCompiler.g:72:11: '<'
+			// CCompiler.g:443:11: '<'
 			{
-			DebugLocation(72, 11);
+			DebugLocation(443, 11);
 			Match('<'); 
 
 			}

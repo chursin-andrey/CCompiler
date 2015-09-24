@@ -27,3 +27,8 @@ C:\Users\Андрей\Documents\GitHub\CCompiler\1\bin\Debug\MathLang.pdb
 C:\Users\Андрей\Documents\GitHub\CCompiler\1\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Андрей\Documents\GitHub\CCompiler\1\obj\Debug\MathLang.exe
 C:\Users\Андрей\Documents\GitHub\CCompiler\1\obj\Debug\MathLang.pdb
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\bin\Debug\MathLang.exe
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\bin\Debug\MathLang.pdb
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\obj\Debug\MathLang.exe
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\obj\Debug\MathLang.pdb
