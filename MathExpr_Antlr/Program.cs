@@ -24,7 +24,7 @@ namespace MathLang
         CCompilerParser parser = new CCompilerParser(tokens);
         ITree program = (ITree)parser.execute().Tree;
         AstNodePrinter.Print(program);
-        //Console.WriteLine();
+        Console.WriteLine();
         //MathLangIntepreter.Execute(program);
       }
       catch (Exception e) {

@@ -55,8 +55,9 @@
     <AntlrLexerFile>@(AntlrGrammarFile->'%(RelativeDir)%(Filename)Lexer.cs')</AntlrLexerFile>
     <AntlrParserFile>@(AntlrGrammarFile->'%(RelativeDir)%(Filename)Parser.cs')</AntlrParserFile>
     <AntlrTokensFile>@(AntlrGrammarFile->'%(RelativeDir)%(Filename).tokens')</AntlrTokensFile>
+	<AntlrGrammarEncoding>Windows-1251</AntlrGrammarEncoding>
   </PropertyGroup>
-  <ItemGroup>
+    <ItemGroup>
     <Compile Include="$(AntlrLexerFile)">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,21 +68,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>@(AntlrGrammarFile)</DependentUpon>
     </Compile>
-    <Compile Include="ParserBaseException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(AntlrTokensFile)">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>@(AntlrGrammarFile)</DependentUpon>
-    </Content>
+    <Compile Include="ParserBaseException.cs" />
   </ItemGroup>
   <PropertyGroup>
     <JavaHome>C:\Program Files\Java\jdk1.7.0_07</JavaHome>
   </PropertyGroup>
   <Target Name="GenerateAntlrCode" Inputs="@(AntlrGrammarFile)" Outputs="$(AntlrLexerFile);$(AntlrParserFile)">
-    <Exec Command="&quot;$(JavaHome)\bin\java&quot; -classpath antlr\java\antlr-3.3-complete.jar org.antlr.Tool -message-format vs2005 @(AntlrGrammarFile)" />
-    <!--Exec Command="&quot;antlr\.net\Antlr3.exe&quot; -message-format vs2005 @(AntlrGrammarFile)" /-->
+    <Exec Command="&quot;$(JavaHome)\bin\java&quot; -classpath antlr\java\antlr-3.4-complete.jar org.antlr.Tool -message-format vs2005 @(AntlrGrammarFile)" Outputs="$(AntlrLexerFile);$(AntlrParserFile)" />
   </Target>
   <Target Name="CleanAntlrCode">
     <Delete Files="$(AntlrLexerFile);$(AntlrParserFile)" />

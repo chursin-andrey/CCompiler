@@ -12,9 +12,9 @@ namespace MathLang
 {
   public class MathLangIntepreter
   {
-    // "ГЄГіГ«ГјГІГіГ°Г®Г­ГҐГ§Г ГўГЁГ±ГЁГ¬Г»Г©" ГґГ®Г°Г¬Г ГІ Г¤Г«Гї Г·ГЁГ±ГҐГ« (Г± Г°Г Г§Г¤ГҐГ«ГЁГІГҐГ«ГҐГ¬ ГІГ®Г·ГЄГ®Г©)
+      // "культуронезависимый" формат для чисел (с разделителем точкой)
     public static readonly NumberFormatInfo NFI = new NumberFormatInfo();
-    // Г­Г ГЎГ®Г° ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Гµ
+    // таблица переменных
     private static IDictionary<string, double> varTable = new Dictionary<string, double>();
 
     private AstNode programNode = null;
@@ -22,7 +22,7 @@ namespace MathLang
 
     public MathLangIntepreter(AstNode programNode) {
       if (programNode.Type != AstNodeType.PROGRAM)
-        throw new IntepreterException("AST-Г¤ГҐГ°ГҐГўГ® Г­ГҐ ГїГўГ«ГїГҐГІГ±Гї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г®Г©");
+          throw new IntepreterException("AST-дерево не является программой");
 
       this.programNode = programNode;
     }
@@ -31,16 +31,18 @@ namespace MathLang
     private double ExecuteNode(AstNode node) {
       switch (node.Type) {
         case AstNodeType.UNKNOWN:
-          throw new IntepreterException("ГЌГҐГ®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­Г­Г»Г© ГІГЁГЇ ГіГ§Г«Г  AST-Г¤ГҐГ°ГҐГўГ ");
+              throw new IntepreterException("Неизвестный тип узла AST-дерева");
 
         case AstNodeType.NUMBER:
           return double.Parse(node.Text, NFI);
 
-        case AstNodeType.IDENTIFIER:
+          case AstNodeType.TRUE:
+
+        case AstNodeType.IDENT:
           if (varTable.ContainsKey(node.Text))
             return varTable[node.Text];
           else
-            throw new ParserBaseException(string.Format("Г‡Г­Г Г·ГҐГ­ГЁГҐ {0} Г­ГҐ Г®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­Г®", node.Text));
+              throw new ParserBaseException(string.Format("Значение {0} не определено", node.Text));
 
         case AstNodeType.ADD:
           return ExecuteNode(node.GetChild(0)) + ExecuteNode(node.GetChild(1));
@@ -57,6 +59,28 @@ namespace MathLang
         case AstNodeType.ASSIGN:
           varTable[node.GetChild(0).Text] = ExecuteNode(node.GetChild(1));
           break;
+
+              case AstNodeType.IF:
+          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0
+              || double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) < 0)
+          {
+              Console.WriteLine(ExecuteNode(node.GetChild(1)).ToString(NFI));
+          }
+          else if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) == 0)
+          {
+              Console.WriteLine(ExecuteNode(node.GetChild(2)).ToString(NFI));
+          }
+          break;
+        
+        
+        case AstNodeType.WHILE:
+          if (double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) > 0
+              || double.Parse(ExecuteNode(node.GetChild(0)).ToString(NFI)) < 0)
+          {
+              Console.WriteLine(ExecuteNode(node.GetChild(1)).ToString(NFI));
+          }
+         
+          break;
 /*
         case AstNodeType.PRINT:
           Console.WriteLine(ExecuteNode(node.GetChild(0)).ToString(NFI));
@@ -72,10 +96,10 @@ namespace MathLang
           for (int i = 0; i < node.ChildCount; i++)
             ExecuteNode(node.GetChild(i));
           break;
-        /*
-        default:
-          throw new IntepreterException("ГЌГҐГЁГ§ГўГҐГ±ГІГ­Г»Г© ГІГЁГЇ ГіГ§Г«Г  AST-Г¤ГҐГ°ГҐГўГ ");
-        */
+          /*
+          default:
+            throw new IntepreterException("Неизвестный тип узла AST-дерева");
+          */
       }
 
       return 0;

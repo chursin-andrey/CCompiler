@@ -32,3 +32,4 @@ C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\bin\Debug\MathLa
 C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\obj\Debug\MathLang.exe
 C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\obj\Debug\MathLang.pdb
+C:\Users\Андрей\Documents\GitHub\CCompiler\MathExpr_Antlr\obj\Debug\MathLang.csprojResolveAssemblyReference.cache
