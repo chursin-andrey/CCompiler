@@ -6,7 +6,7 @@ using Antlr.Runtime.Tree;
 using AstNode = Antlr.Runtime.Tree.ITree;
 
 
-namespace MathLang
+namespace MathExpr
 {
   public class AstNodePrinter
   {

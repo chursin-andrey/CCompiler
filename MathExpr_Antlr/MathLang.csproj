@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AstNode.cs" />
     <Compile Include="AstNodePrinter.cs" />
     <Compile Include="IntepreterException.cs" />
     <Compile Include="MathAstNode.cs" />
@@ -55,9 +56,9 @@
     <AntlrLexerFile>@(AntlrGrammarFile->'%(RelativeDir)%(Filename)Lexer.cs')</AntlrLexerFile>
     <AntlrParserFile>@(AntlrGrammarFile->'%(RelativeDir)%(Filename)Parser.cs')</AntlrParserFile>
     <AntlrTokensFile>@(AntlrGrammarFile->'%(RelativeDir)%(Filename).tokens')</AntlrTokensFile>
-	<AntlrGrammarEncoding>Windows-1251</AntlrGrammarEncoding>
+    <AntlrGrammarEncoding>Windows-1251</AntlrGrammarEncoding>
   </PropertyGroup>
-    <ItemGroup>
+  <ItemGroup>
     <Compile Include="$(AntlrLexerFile)">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,7 +74,7 @@
     <Compile Include="ParserBaseException.cs" />
   </ItemGroup>
   <PropertyGroup>
-    <JavaHome>C:\Program Files\Java\jdk1.7.0_07</JavaHome>
+    <JavaHome>C:\Program Files\Java\jdk1.7.0_79</JavaHome>
   </PropertyGroup>
   <Target Name="GenerateAntlrCode" Inputs="@(AntlrGrammarFile)" Outputs="$(AntlrLexerFile);$(AntlrParserFile)">
     <Exec Command="&quot;$(JavaHome)\bin\java&quot; -classpath antlr\java\antlr-3.4-complete.jar org.antlr.Tool -message-format vs2005 @(AntlrGrammarFile)" Outputs="$(AntlrLexerFile);$(AntlrParserFile)" />

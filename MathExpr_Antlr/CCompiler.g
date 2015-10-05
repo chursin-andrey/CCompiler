@@ -22,14 +22,17 @@ tokens {
 
   PROGRAM           ;
   INCLUDE			;
+  DEFINE			;
   TYPE              ;
   ARGS_DECL         ;
   FUNC_DECL         ;
   ARGS              ;
   CALL              ;
+  CONVERT			;
   BLOCK             ;
   INDEX             ;
   UNKNOWN           ;
+  FUNCTION = 'function' ;
 }
 
 
@@ -60,7 +63,7 @@ GT:       '>'   ;
 LT:       '<'   ;
  
 
-WS  :  (' '|'\r'|'\t'|'\u000C'|'\n') {$channel=Hidden;}
+WS  :  (' ' | '\r' |'\t' |'f' | '\n') {$channel=Hidden;}
     ;
 
 
@@ -120,12 +123,10 @@ ident: IDENT ;
 
 /*
 MACRO_TEXT:  ( ~'\n' )*   ;
-DEFINE_TOKEN: '#define' WS IDENT WS MACRO_TEXT;
-INCLUDE_TOKEN:  '#include' (WS)? STRING;
+DEFINE_TOKEN: '#define' WS ident WS MACRO_TEXT;
 IFDEF_TOKEN: ('ifdef' | '#ifndef') WS IDENT;
 ELSE_TOKEN: ('else' | 'elsif' WS IDENT);            
 */
-
 
 
 type0:
@@ -260,11 +261,17 @@ argDecl:
 argsDecl:
   (argDecl (',' argDecl)*)?  ->  ^(ARGS_DECL argDecl*)
 ;
+
 funcDecl:
-  type IDENT '(' argsDecl ')' '{' exprList '}' ';'*
-    ->  ^(FUNC_DECL IDENT type argsDecl exprList)
+  t=type n=ident '(' argsDecl? ')'
+  '{' exprList '}'
+  -> ^(FUNCTION $t $n ^(ARGS argsDecl*) exprList)
 ;
 
+/*
+macroText:  ( ~'\n' )*   ;
+defineDecl: '#define' ident macroText -> ^(DEFINE ident? macroText?) ;
+*/
 
 macroDecl:
   '#include' (s1=STRING | s2=INCLUDE_STRING)  ->  ^(INCLUDE $s1? $s2?)

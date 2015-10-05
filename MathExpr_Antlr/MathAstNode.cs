@@ -4,7 +4,7 @@ using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 
 
-namespace MathExpr
+namespace MathLang
 {
   public class MathAstNode: CommonTree
   {
