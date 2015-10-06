@@ -12,6 +12,6 @@
     <StartArguments>..\..\c99.txt</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
-    <JavaHome>C:\Program Files\Java\jdk1.7.0_07</JavaHome>
+    <JavaHome>C:\Program Files\Java\jdk1.7.0_79</JavaHome>
   </PropertyGroup>
 </Project>
