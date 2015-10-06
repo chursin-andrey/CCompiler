@@ -16,9 +16,7 @@ lib/*
 output/*
 _UpgradeReport_Files/*
 *.idc
-SimpleC.g.1
 Backup/*
 UpgradeLog.xml
 build.bat
 *.tokens
-works.bat
