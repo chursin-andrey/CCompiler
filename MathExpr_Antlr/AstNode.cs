@@ -30,7 +30,7 @@ namespace MathLang
     {
         string result = base.ToString();
         if (DataType != DataType.Void)
-            result += ", " + MathLangIntepreter.DataTypeToStr(DataType);
+            result += ", " + SemanticChecker.DataTypeToStr(DataType);
         return result;
     }
   }

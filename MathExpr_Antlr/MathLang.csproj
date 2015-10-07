@@ -43,7 +43,7 @@
     <Compile Include="AstNodePrinter.cs" />
     <Compile Include="IntepreterException.cs" />
     <Compile Include="MathAstNode.cs" />
-    <Compile Include="MathLangIntepreter.cs" />
+    <Compile Include="SemanticChecker.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

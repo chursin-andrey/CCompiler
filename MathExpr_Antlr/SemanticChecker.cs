@@ -96,7 +96,7 @@ namespace MathLang
         }
     }
 
-  public class MathLangIntepreter
+  public class SemanticChecker
   {
       private static DataType StrToDataType(string type)
       {
@@ -434,7 +434,7 @@ namespace MathLang
     private AstNode programNode = null;
 
 
-    public MathLangIntepreter(AstNode programNode) {
+    public SemanticChecker(AstNode programNode) {
       if (programNode.Type != AstNodeType.PROGRAM)
           throw new IntepreterException("AST-дерево не является программой");
 
@@ -493,7 +493,7 @@ namespace MathLang
 
 
     public static void Execute(AstNode programNode) {
-      MathLangIntepreter mei=new MathLangIntepreter(programNode);
+      SemanticChecker mei=new SemanticChecker(programNode);
       mei.Execute();
     }
     */

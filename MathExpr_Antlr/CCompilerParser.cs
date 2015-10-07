@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 CCompiler.g 2015-10-05 17:05:04
+// $ANTLR 3.4 CCompiler.g 2015-10-06 15:48:23
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -668,7 +668,7 @@ public partial class CCompilerParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: IDENT, args
+			// elements: args, IDENT
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -4133,7 +4133,7 @@ public partial class CCompilerParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: exprList, argsDecl, t, n
+			// elements: exprList, n, argsDecl, t
 			// token labels: 
 			// rule labels: retval, t, n
 			// token list labels: 

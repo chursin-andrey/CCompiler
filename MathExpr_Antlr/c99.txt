@@ -2,19 +2,30 @@
 #include "test.h"
 
 
-void sum(int a, int b) {
-    int c=10;
-    if (c > a){
-        c = a+b;
-    }
-    else{
-    c=a-b;
-    }
+int sum(int a, int b) {
+  return a+b;
 }
 
-void main (){
-  int a,b;
+void test () {
+  int a, b;
   a=5;
   b=5;
   sum(a,b);
+  int c=10;
+  if (c > a) {
+	c = a+b;
+  }
+  else c=a-b;  
+}
+
+void main(int argCount) {
+  if (argCount > 0) {
+    test();
+  }
+  else
+    matrix();
+}
+
+int[][] matrix() {
+  t(a);
 }

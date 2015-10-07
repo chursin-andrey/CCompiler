@@ -21,7 +21,7 @@ namespace MathLang
         CCompilerParser parser = new CCompilerParser(tokens);
         parser.TreeAdaptor = new AstNodeTreeAdapter();
         AstNode program = (AstNode)parser.execute().Tree;
-        MathLangIntepreter.Check((AstNode)program, context);
+        SemanticChecker.Check((AstNode)program, context);
         return program;
     }
 
@@ -39,8 +39,8 @@ namespace MathLang
         ITree program = (ITree)parser.execute().Tree;
         AstNodePrinter.Print(program);
         Console.WriteLine();
-        //MathLangIntepreter.Execute(program);
-        MathLangIntepreter.Check((AstNode)program, context);
+        //SemanticChecker.Execute(program);
+        SemanticChecker.Check((AstNode)program, context);
 
       }
       catch (Exception e) {
