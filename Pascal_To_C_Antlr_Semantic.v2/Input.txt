@@ -10,8 +10,8 @@ int aa = 9;
 }
 
 
-for(;;) printInt(a+7*5, a2);
+for(;;) printInt(a+7*5);
 
 int a2 = readInt();
 //int a2 = 10;
-printDouble(a1, a2);
+//printDouble(a1, a2);

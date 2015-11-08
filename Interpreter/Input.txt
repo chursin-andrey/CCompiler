@@ -1,13 +1,14 @@
 void putchar(int ch);
 
-void f(int a, int b, int c, int d);
+//void f(int a, int b, int c, int d);
+
+void f(int a, int b, int c, int d)
+{
+	putchar(d, s);
+}
 
 void main(int a)
 {
 	f(1, 2, 3, 4);
 }
 
-void f(int a, int b, int c, int d)
-{
-	putchar(d, s);
-}

@@ -8,7 +8,7 @@ int puts(char *str);
 void printf(char *format, int ch);
 
 
-int main(int);
+int main(bool);
 /*
 void putchar(int ch);
 
