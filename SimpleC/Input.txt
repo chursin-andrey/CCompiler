@@ -9,5 +9,8 @@ void main()
 
 void f(int a, int b, int c, int d)
 {
+	println(a);
+	println(b);
+	println(c);
 	println(d);
 }

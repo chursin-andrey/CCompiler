@@ -14,11 +14,15 @@ void test () {
   int c=10;
   if (c > a) {
 	c = a+b;
+	a += 1;
   }
-  else c=a-b;  
+  else {
+	c=a-b;  
+	a -= 1;
+  }
 }
 
-void main(int argCount) {
+void main(argCount) {
   if (argCount > 0) {
     test();
   }

@@ -1,13 +1,13 @@
-void println(int x);
+void putchar(int ch);
 
 void f(int a, int b, int c, int d);
 
-void main()
+void main(int a)
 {
 	f(1, 2, 3, 4);
 }
 
 void f(int a, int b, int c, int d)
 {
-	println(d);
+	putchar(d, s);
 }

@@ -8,6 +8,8 @@ int puts(char *str);
 void printf(char *format, int ch);
 
 
+int main(int);
+/*
 void putchar(int ch);
 
 void f1(int a, int b, int c)
@@ -15,7 +17,27 @@ void f1(int a, int b, int c)
 	putchar(b);
 }
 
-void main()
+void test ();
+void test () {
+  int a;
+  int b;
+  a=5;
+  b=5;
+  sum(a,b);
+  int c = 10;
+  if (c > a)
+	c = a+b;
+  else {
+	c=a-b;  
+	a -= 1;
+  }
+}*/
+
+int main(int argCount)
 {
-	f1(1, 2, 3);
+  return 0;
+  //if (argCount > 0)
+  //f1(1, 2, 3);
 }
+
+
