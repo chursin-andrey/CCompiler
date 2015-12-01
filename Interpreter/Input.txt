@@ -1,4 +1,10 @@
 void putchar(int ch);
+int getchar();
+char *gets(char *str);
+int puts(char *str);
+void printf(char *format, int ch);
+
+void putchar(int ch);
 
 //void f(int a, int b, int c, int d);
 

@@ -1,6 +1,4 @@
 [Oo]bj
-[Bb]in
-*.suo
 *.[Cc]ache
 *.bak
 *.ncb
@@ -17,5 +15,4 @@ _UpgradeReport_Files/*
 *.idc
 Backup/*
 UpgradeLog.xml
-build.bat
 *.tokens
